@@ -1,2 +1,3 @@
 *.js
 !*.ts
+node_module
