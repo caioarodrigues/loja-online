@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja online</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="todo-conteudo">
+        <section class="operacoes">
+            <div>
+                <form action="" method="post" class="adicionar">
+                    <label for="nome-produto">Nome do produto</label>
+                    <input type="text" id="nome-produto">
+                    <label for="quantidade-produto">Quantidade</label>
+                    <input type="number" name="quantidade-produto" id="quantidade-produto">
+                    <label for="preco-produto">Preço</label>
+                    <input type="number" name="preco-produto" id="preco-produto">
+                    
+                    <div class="btn-div">
+                        <button type="submit" id="btn-adicionar">Adicionar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <form action="" method="get" class="obter-produto">
+                    <label for="nome-produto">Insira o nome</label>
+                    <input type="text" name="" id="nome-produto">
+    
+                    <div class="btn-div">
+                        <button type="submit">Procurar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="lista-bd">
+            <ol class="lista-itens"></ol>
+        </section>
+    </main>
+</body>
+
+<script src="./script.js"></script>
+</html>
