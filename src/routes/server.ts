@@ -1,11 +1,13 @@
 import express, { Application, Request, Response } from 'express';
 import BdController from '../controllers/bdController';
 import { item } from '../types/itemType';
+import cors from 'cors';
 
 const app: Application = express();
 const porta: number = 3000;
 
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.get('/', (req: Request, res: Response) => {
     const itens: Array<item> = BdController.obtemTodosItens();
@@ -16,7 +18,7 @@ app.get('/', (req: Request, res: Response) => {
         return;
     }
     
-    res.status(204).json(itens);
+    res.status(200).send(JSON.stringify([]));
 });
 
 app.get('/:nomeProduto', (req: Request, res: Response) => {
@@ -40,7 +42,6 @@ app.post('/adiciona', (req: Request, res: Response) => {
     const { nome, preco, quantidade } = req.body;
     const item: item = { nome, preco, quantidade };
 
-    console.log(`item = ` + nome + preco + quantidade);
     console.log(req.body);
     BdController.adicionaItem(item);
     res.status(200).send(item);

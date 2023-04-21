@@ -1,5 +1,23 @@
+### Instale as dependências do Node
+Não esqueça: 
+
+        $ cd ./src
+        $ npm i
+
+### Frontend
+O frontend da aplicação está no arquivo index.html.
+<br>
+É bastante simples. A partir dele dá pra acessar tudo
+
 ### Servidor
 A aplicação é executada em <strong> localhost:3000 </strong>
+
+<br>
+Para iniciar o servidor:
+
+        $ cd ./src
+        $ npm run start
+<br>
 
 ### Rotas
 <ul>
@@ -12,7 +30,7 @@ A aplicação é executada em <strong> localhost:3000 </strong>
 ### Nota
     Para fazer as operações POST e DELETE, deve-se enviar no corpo da requisição um objeto da estrutura ITEM, ou seja:
         
-        item: {
+        item = {
             nome, 
             quantidade, 
             preco

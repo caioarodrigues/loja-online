@@ -11,35 +11,40 @@
 <body>
     <main class="todo-conteudo">
         <section class="operacoes">
-            <div>
-                <form action="" method="post" class="adicionar">
-                    <label for="nome-produto">Nome do produto</label>
-                    <input type="text" id="nome-produto">
-                    <label for="quantidade-produto">Quantidade</label>
-                    <input type="number" name="quantidade-produto" id="quantidade-produto">
-                    <label for="preco-produto">Preço</label>
-                    <input type="number" name="preco-produto" id="preco-produto">
-                    
-                    <div class="btn-div">
-                        <button type="submit" id="btn-adicionar">Adicionar</button>
-                    </div>
-                </form>
-            </div>
+            <form action="/adiciona" method="post" class="adicionar">
+                <label for="nome-produto">Nome do produto</label>
+                <input type="text" name="nome" id="nome-produto">
+                <label for="quantidade-produto">Quantidade</label>
+                <input type="number" name="quantidade" id="quantidade-produto">
+                <label for="preco-produto">Preço</label>
+                <input type="number" name="preco" id="preco-produto">
+                
+                <div class="btn-div">
+                    <button type="submit" id="btn-adicionar">Adicionar</button>
+                </div>
+            </form>
 
-            <div>
-                <form action="" method="get" class="obter-produto">
-                    <label for="nome-produto">Insira o nome</label>
-                    <input type="text" name="" id="nome-produto">
-    
-                    <div class="btn-div">
-                        <button type="submit">Procurar</button>
-                    </div>
-                </form>
-            </div>
+            <form action="/nome" method="get" class="obter-produto">
+                <label for="nome-produto">Insira o nome</label>
+                <input type="text" name="nome" id="nome-produto">
+
+                <div class="btn-div">
+                    <button type="submit" id="btn-procurar">Procurar</button>
+                </div>
+            </form>
+
+            <form action="/remove" method="delete" class="remover-produto">
+                <label for="nome-produto">Insira o nome</label>
+                <input type="text" name="nome" id="nome-produto">
+
+                <div class="btn-div">
+                    <button type="submit" id="btn-remover">Remover</button>
+                </div>
+            </form>
         </section>
 
         <section class="lista-bd">
-            <ol class="lista-itens"></ol>
+            <ul class="lista-itens"></ul>
         </section>
     </main>
 </body>
