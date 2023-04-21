@@ -1,3 +1,4 @@
 *.js
 !*.ts
+!script.js
 node_module
