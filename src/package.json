@@ -7,14 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc ./routes/server.ts --esModuleInterop --resolveJsonModule -w",
     "nodemon": "nodemon ./routes/server.js --watch",
-    "start": "node ./routes/server.js"
+    "start": "tsc ./routes/server.ts --esModuleInterop --resolveJsonModule && node ./routes/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
