@@ -31,7 +31,7 @@ Para iniciar o servidor:
     Para fazer as operações POST e DELETE, deve-se enviar no corpo da requisição um objeto da estrutura ITEM, ou seja:
         
         item = {
-            nome, 
-            quantidade, 
-            preco
+            nome: string, 
+            quantidade: number, 
+            preco: number
         }
